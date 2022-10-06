@@ -113,12 +113,52 @@ header {
 .menu {
     width: 100%;
     height: auto;
-    background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
+    background-image: url('../img/menu-header.jpg');
+    background-color: rgba(0, 4, 17, 0.8);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 3% 5%;
 }
+
+.menu::before {
+    opacity: 0.2;
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.menu-section {
+    width: 40%;
+    margin: 3rem 2rem;
+}
+
+.menu-section h3 {
+    margin-bottom: 2rem;
+}
+
+.menu-section:last-child {
+    margin: 3rem auto;
+}
+
+.menu-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+div.menu-item p {
+    flex-basis: 100%;
+}
+
 
 /* footer section */
 footer {
@@ -139,8 +179,38 @@ footer {
     }
 
     /* menu */
-    .menu {
+     /* menu */
+     .menu {
         background-image: none;
+        background-color: rgb(225, 239, 230);
+        text-align: center;
+        
+    }
+
+    .menu-section, .menu-item, .menu-container {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-section {
+        width: 90%;
+    }
+
+    .menu-section h3 {
+        border: 2px solid rgb(0, 4, 17);
+    }
+    .menu-item {
+        width: 80%;
+        border-bottom: 8px solid rgb(0, 4, 17);
+        margin: 0 auto 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .menu-section .menu-item:last-child {
+        border: none;
+    }
+    .menu h2, .menu-section h3, .menu-item h4, .menu-item p {
+        color: rgb(0, 4, 17);
     }
 
     /* footer section */
